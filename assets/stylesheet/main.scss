@@ -1,0 +1,432 @@
+/* CSS Resets */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Main CSS */
+:root {
+	--bg-primary: #4e5266;
+	--bg-secondary: #575B72;
+	--color-primary: #4cabb1;
+	--color-secondary: #69c7ad;
+	--color-tertiary: #fed586;
+	--font: 'Raleway', sans-serif;
+	--text-color: #434b56;
+	--heading-color: #fff;
+	font-size: 16px;
+}
+body {
+	font-family: var(--font);
+	line-height: 1.5;
+	color: var(--text-color);
+}
+
+
+/********** Base CSS *************/
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: red;
+}
+button {
+	border: 0;
+	cursor: pointer;
+}
+button:focus {
+	outline: 0;
+}
+input {
+	border: 0;
+	margin: 0;
+}
+input:focus {
+	outline: 0;
+}
+/** Heading Elements **/
+h1 {
+	font-size: 3rem;
+	font-weight: 700;
+}
+h2 {
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+h3 {
+	font-size: 2rem;
+	font-weight: 700;
+}
+h4 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+h5 {
+	font-size: 1rem;
+	font-weight: 700;
+}
+h6 {
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.img-responsive {
+	width: 100%;
+}
+/** clearfix **/
+.clearfix:before, .clearfix:after {
+	content: '';
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+
+/* General */
+.wrapper {
+	max-width: 1100px;
+	width: 100%;
+	margin: 0 auto;
+}
+.padding {
+	padding: 80px 0;
+}
+.heading {
+	color: var(--heading-color);
+	font-size: 1.5rem;
+	font-weight: 500;
+	letter-spacing: 0.05rem;
+}
+.heading-secondary {
+	color: var(--text-color);
+}
+.sub-heading {
+	font-weight: 400;
+	color: #b6babf;
+}
+
+/* Reddit Clone Styles */
+
+body {
+	background-color: #DAE0E6;
+}
+
+.header-container {
+
+}
+.drop-down-nav {
+	display: flex;
+	align-items: center;
+	// justify-content: space-around;
+}
+.drop-down-nav p {
+	margin: 0 10px;
+	margin-right: 80px;
+	font-size: 12px;
+}
+.nav {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: white;
+	padding: 5px;
+}
+.reddit-home {
+	margin-left: 0px;
+}
+
+.green-reddit {
+	border-radius: 50% 50%;
+}
+.search-nav {
+	width: 50%;
+	background-color: white;
+	padding: 0 12px;
+	border-radius: 5px 5px;
+}
+.search-nav input {
+	width: 90%;
+}
+.button-nav {
+	padding: 8px 24px;
+	background-color:#0079d3;
+	border-radius: 4px;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+	font-size: 8px;
+}
+.login {
+	background-color: white;
+	border: 1px solid #0079d3;
+	color: blue;
+}
+
+// Hero Section Styles
+.hero {
+	
+	background-color: #26A69A;
+	// margin-bottom: 15px;
+}
+.hero-banner {
+	display: flex;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+}
+.green-reddit-hero {
+	border-radius: 50% 50%;
+	border: 2px solid white;
+	margin: 5px;
+}
+.hero-links {
+	display: flex;
+}
+.hero-links a {
+	color: white;
+	margin: 10px;
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+// Reddit Post Styles
+
+.post-container {
+	display: grid;
+	grid-template-columns: 700px;
+	grid-column-gap: 20px;
+}
+.post {
+	background-color: white;
+	display: flex;
+	margin-bottom: 10px;
+	border: 1px solid rgb(194, 193, 193);
+}
+.votes {
+	width: 40px;
+	padding: 5px;
+	// margin: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: flex-start;
+	background-color: rgb(241, 245, 248);
+	// border-left: 1px solid transparent;
+}
+.votes .vote-count {
+	font-size: 14px;
+	font-weight: bold;
+}
+.post-content {
+	padding: 5px;
+	color: #A6A8AA;
+}
+.post-content a {
+	color: blue;
+	text-decoration: blue;
+	font-size: 10px;
+}
+.posted-by {
+	font-size: 10px;
+}
+.post-action {
+	color: rgb(139, 139, 139);
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+}
+.post-action i {
+	margin: 5px;
+}
+
+// Side Bar Styles
+.card {
+	display: flex;
+}
+
+.side-container {
+	width: 300px;
+	margin-left: 10px;
+	// border-radius: 15px 5px 4px 4px;
+}
+.side-box {
+	margin-bottom: 10px;
+	border: 1px solid rgb(194, 193, 193);
+	background-color: white;
+}
+
+.side-header {
+	background-color: #11483C;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.subreddit {
+	padding: 10px;
+}
+.subreddit i {
+	font-size: 24px;
+}
+.subreddit a {
+	font-size: 16px;
+}
+.side-header h4 {
+	color: white;
+	font-size: 8px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.subreddit-details {
+	display: flex;
+	font-size: 12px;
+	color: black;
+}
+.subreddit-count {
+	width: 140px;
+	padding: 10px;
+}
+.subreddit-online {
+	padding: 10px;
+	border-left: 1px solid rgb(226, 225, 225);
+}
+.counts {
+	font-weight: bold;
+}
+
+// User Description Styles
+.user-description {
+	margin: 0 10px;
+}
+.user-description p {
+	font-family: "Noto Sans", Arial, sans-serif;
+	font-size: 12px;
+	line-height: 21px;
+	color: #1a1a1b;
+	margin-bottom: 10px;
+}
+
+// Button Styles
+
+.button {
+	padding: 10px;
+	background-color:#0079d3;
+	border-radius: 4px;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+}
+
+.subcreate {
+	width: 280px;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+.subcreate:hover {
+	background: #4ea6e9;
+}
+
+// Content Phisophy Styles
+.content-philosophy {
+	margin: 0 10px;
+}
+.content-philosophy p {
+	font-family: "Noto Sans", Arial, sans-serif;
+	font-size: 10px;
+	line-height: 21px;
+	color: #1a1a1b;
+}
+
+// Back To Top 
+
+#myBtn {
+  display: none;
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  color: white; 
+  cursor: pointer; 
+  border-radius: 10px; 
+	font-size: 14px;
+	padding: 10px;
+	background-color:#0079d3;
+	border-radius: 4px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+#myBtn:hover {
+	background: #4ea6e9;
+}
